@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.decomposition import PCA
+from sklearn.manifold import Isomap
 
 
 def index(df):
@@ -21,7 +21,7 @@ class Index:
 
         # train a PCA model
         n_comp = 1  # number of principal components
-        component = PCA(n_components=n_comp, random_state=42)
+        component = Isomap(n_components=n_comp)
         component.fit(df)
 
         # compute index for all the data
