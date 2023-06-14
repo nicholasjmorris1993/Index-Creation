@@ -5,7 +5,7 @@ import scipy.cluster.hierarchy as sch
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("/home/nick/Index-Creation/src")
-from pca import index
+from isomap import index
 
 
 def corr_plot(df, size=10, method="ward", title="Correlation Plot", save=False):
@@ -48,6 +48,6 @@ corr_plot(
     df=data, 
     size=10, 
     method="ward", 
-    title="Lung Capacity Correlation Plot", 
+    title="Lung Capacity Correlation Plot 2", 
     save=True,
 )
